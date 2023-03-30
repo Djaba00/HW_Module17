@@ -9,15 +9,11 @@ namespace BankApp
         {
             var calculator = new Calculator();
 
-            var account1 = new DefaultAccount() { Balance = 500 };
+            calculator.PerformCalculateInterest(new DefaultAccount(500));
 
-            var account2 = new DefaultAccount() { Balance = 60000 };
+            calculator.PerformCalculateInterest(new DefaultAccount(60000));
 
-            var account3 = new SalaryAccount() { Balance = 10000 };
-
-            calculator.PerformCalculateInterest(account1);
-            calculator.PerformCalculateInterest(account2);
-            calculator.PerformCalculateInterest(account3);
+            calculator.PerformCalculateInterest(new SalaryAccount(50000));
         }
     }
 }

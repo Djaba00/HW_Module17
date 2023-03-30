@@ -7,6 +7,12 @@ namespace BankApp.Accounts
         public double Balance { get; set; }
         
         public double Interest { get; set; }
+
+        public DefaultAccount(double balance)
+        {
+            Balance = balance;
+        }
+
         public void CalculateInterest()
         {
             Interest = Balance * 0.4;
